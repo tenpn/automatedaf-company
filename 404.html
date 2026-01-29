@@ -1,16 +1,21 @@
 ---
-layout: default
+layout: single_page
+title: "404"
 permalink: /404.html
 ---
 
-<section class="relative min-h-screen flex items-center justify-center pt-20 bg-grid overflow-hidden">
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
-        <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6">404</h1>
-        <p><strong>Page not found :(</strong></p>
-        <p>The requested page could not be found.</p>
-        <!-- <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6">
-            Make Your Builds <br />
-            <span class="text-brand-tech terminal-cursor">Predictable.</span>
-        </h1> -->
-    </div>
+<section class="font-mono min-h-screen flex items-center bg-grid">
+	<div class="mx-auto flex flex-col items-center text-center">
+		<div class="mb-16">
+			{% include elements/logo_large.html %}
+		</div>
+		<h1 class="font-bold text-white tracking-tight mb-6">404</h1>
+		<p><strong>Page not found :(</strong></p>
+		<p>The requested page could not be found.</p>
+		<div class="mt-16">
+			<a href="{{ '/' | relative_url }}" class="hero-btn-primary">
+				Go Back Home
+			</a>
+		</div>
+	</div>
 </section>

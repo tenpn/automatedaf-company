@@ -1,0 +1,120 @@
+// Typography
+
+// Text Colors
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: $color-white;
+}
+
+.text-slate-300 {
+    color: $color-slate-300;
+}
+
+.text-slate-400 {
+    color: $color-slate-400;
+}
+
+.text-slate-500 {
+    color: $color-slate-500;
+}
+
+.text-brand-accent {
+    color: $color-brand-accent;
+}
+
+.text-brand-tech {
+    color: $color-brand-tech;
+}
+
+.text-green-400 {
+    color: $color-green-400;
+}
+
+.text-green-500 {
+    color: $color-green-500;
+}
+
+// Font Sizes
+.text-xs {
+    font-size: 0.75rem;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+}
+
+// Font Weights
+.font-bold {
+    font-weight: bold;
+}
+
+.font-mono {
+    font-family: $font-mono;
+}
+
+.italic {
+    font-style: italic;
+}
+
+// Headings
+.title-lg {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: $color-white;
+    margin-bottom: $spacing-4;
+}
+
+.title-xl {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: $color-white;
+    margin-bottom: $spacing-4;
+}
+
+.heading {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: $color-white;
+    margin-top: $spacing-1;
+    margin-bottom: $spacing-3;
+}
+
+.heading-flex {
+    display: flex;
+    align-items: center;
+    gap: $spacing-3;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: $color-white;
+    margin-top: $spacing-1;
+    margin-bottom: $spacing-4;
+}
+
+.subheading {
+    font-weight: bold;
+    color: $color-white;
+    margin-bottom: $spacing-2;
+}

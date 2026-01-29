@@ -1,0 +1,40 @@
+<!-- Navigation -->
+<nav class="nav-container">
+	<div class="nav-inner">
+		<div class="nav-content">
+			<div class="nav-logo" onclick="window.scrollTo(0,0)">
+				{% include elements/logo_small.html %}
+				<div class="nav-logo-text">
+					<span class="text-brand-tech">AUTOMATED</span><span class="text-brand-accent font-bold">AF</span>
+				</div>
+			</div>
+
+			<!-- Desktop Menu -->
+			<div class="nav-desktop">
+				<div class="nav-menu">
+					<a href="#build" class="nav-link">Build Engineering</a>
+					<a href="#qa" class="nav-link tech">QA Engineering</a>
+					<a href="#training" class="nav-link green">Training</a>
+					<a href="#contact" class="nav-link-cta">Contact Us</a>
+				</div>
+			</div>
+
+			<!-- Mobile menu button -->
+			<div>
+				<button id="mobile-menu-btn" class="nav-mobile-btn">
+					<i class="fas fa-bars"></i>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Mobile Menu Panel -->
+	<div id="mobile-menu" class="nav-mobile-menu hidden">
+		<div class="nav-mobile-menu-inner">
+			<a href="#build" class="nav-mobile-link">Build Engineering</a>
+			<a href="#qa" class="nav-mobile-link tech">QA Engineering</a>
+			<a href="#training" class="nav-mobile-link green">Training</a>
+			<a href="#contact" class="nav-mobile-link cta">Contact Us</a>
+		</div>
+	</div>
+</nav>

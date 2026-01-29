@@ -1,0 +1,27 @@
+// Section Styles
+
+.section {
+	padding: $spacing-24 0;
+}
+
+.section-border {
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.section-bg {
+	background-color: $color-brand-surface
+}
+
+section#tech {
+	background-image: url("/assets/bg_unity_editor_01.png");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center
+}
+
+section#qa {
+	background-image: url("/assets/bg_code.png");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+}

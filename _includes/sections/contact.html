@@ -1,0 +1,38 @@
+<section id="contact" class="footer-section">
+	<div class="footer-grid bg-grid"></div>
+	<div class="footer-content">
+		<h2 class="footer-title">Ready to Automate?</h2>
+		<p class="footer-description">
+			Whether you need a quick pipeline fix or a long-term build engineering partner, let's talk about how to make your development process boringly predictable.
+		</p>
+
+		<form class="footer-form" onsubmit="event.preventDefault(); alert('Message sent! (This is a demo)');">
+			<div class="form-group">
+				<label for="email" class="sr-only">Email</label>
+				<input type="email" id="email" class="form-input" placeholder="enter_your@email.com">
+			</div>
+			<div class="form-group">
+				<label for="message" class="sr-only">Message</label>
+				<textarea id="message" rows="4" class="form-textarea" placeholder="Tell us about your studio's needs..."></textarea>
+			</div>
+			<button type="submit" class="form-submit">
+				CONTACT
+			</button>
+		</form>
+
+		<div class="flex items-center justify-center mt-16">
+			{% include elements/logo_large.html %}
+		</div>
+
+		<div class="footer-bottom">
+			<div>
+				&copy; {{ site.time | date: '%Y' }} Automated AF. All rights reserved.
+			</div>
+			<div class="footer-social">
+				<a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
+				<a href="#" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
+				<a href="#" class="footer-social-link"><i class="fab fa-github"></i></a>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,74 @@
+// Footer Section
+
+.footer-section {
+    padding: $spacing-24 0;
+    background: linear-gradient(to bottom, $color-brand-darker, $color-black);
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.2;
+}
+
+.footer-content {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 0 $spacing-4;
+    text-align: center;
+}
+
+.footer-title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: $color-white;
+    margin-bottom: $spacing-8;
+}
+
+.footer-description {
+    color: $color-slate-400;
+    margin-bottom: $spacing-10;
+    font-size: 1.125rem;
+}
+
+.footer-form {
+    max-width: 28rem;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-bottom {
+    margin-top: $spacing-16;
+    padding-top: $spacing-8;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-slate-500;
+    font-size: 0.875rem;
+    gap: $spacing-4;
+
+    @media (min-width: $breakpoint-md) {
+        flex-direction: row;
+        gap: 0;
+    }
+}
+
+.footer-social {
+    display: flex;
+    gap: $spacing-6;
+}
+
+.footer-social-link {
+    color: $color-slate-500;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+        color: $color-white;
+    }
+}

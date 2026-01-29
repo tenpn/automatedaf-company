@@ -1,0 +1,45 @@
+:root {
+  --depth: 344px; /* Thickness of the logo */
+  --size: 344px; /* Size of each cube face */
+}
+
+
+.cube {
+	width: var(--size);
+	height: var(--size);
+	position: relative;
+	transform-style: preserve-3d;
+	perspective: none;
+	scale: 0.6;
+	transform: rotateX(-15deg) rotateY(-135deg);
+	transform-origin: center center;
+	animation: spin 5s infinite linear;
+
+	
+	.face {
+		background-color: transparent !important;
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotateX(-15deg) rotateY(-135deg);
+	}
+	100% {
+		transform: rotateX(-15deg) rotateY(-495deg);
+	}
+}
+
+.face {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  border: 2px dashed rgba(255, 255, 255, 0.527);
+}
+
+.front  { transform: rotateY(0deg) translateZ(calc(var(--depth) / 2)); }
+.back   { transform: rotateY(180deg) translateZ(calc(var(--depth) / 2)); }
+.right  { width: var(--depth); transform: rotateY(90deg) translateZ(calc(var(--size) - (var(--depth) / 2))); }
+.left   { width: var(--depth); transform: rotateY(-90deg) translateZ(calc(var(--depth) / 2)); }
+.top    { height: var(--depth); transform: rotateX(90deg) translateZ(calc(var(--depth) / 2)); }
+.bottom { height: var(--depth); transform: rotateX(-90deg) translateZ(calc(var(--size) - (var(--depth) / 2))); }

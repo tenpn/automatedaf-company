@@ -1,0 +1,167 @@
+// Navigation Styles
+
+.nav-container {
+	position: fixed;
+	width: 100%;
+	z-index: 50;
+	background: rgba(14, 14, 14, 0.7);
+	backdrop-filter: blur(10px);
+	border-bottom: 1px solid #2e2e2e;
+}
+
+.nav-inner {
+	max-width: $container-max-width;
+	margin: 0 auto;
+	padding: 0 $spacing-4;
+
+	@media (min-width: $breakpoint-sm) {
+		padding: 0 $spacing-6;
+	}
+
+	@media (min-width: $breakpoint-lg) {
+		padding: 0 $spacing-8;
+	}
+}
+
+.nav-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 5rem;
+}
+
+.nav-logo {
+	flex-shrink: 0;
+	cursor: pointer;
+	font-size: 1.7rem;
+	color: $color-white;
+	letter-spacing: -0.05em;
+	display: flex;
+	align-items: center;
+	.logo-grid{
+		margin-right: $spacing-2;
+		scale: 0.6;
+	}
+
+	&:hover > * {
+		color: $color-white !important;
+	}
+}
+
+.nav-desktop {
+	display: none;
+
+	@media (min-width: $breakpoint-md) {
+		display: block;
+	}
+}
+
+.nav-menu {
+	margin-left: $spacing-10;
+	display: flex;
+	align-items: baseline;
+	gap: $spacing-8;
+}
+
+.nav-link {
+	padding: $spacing-2 $spacing-3;
+	border-radius: $radius-md;
+	font-size: 0.875rem;
+	font-weight: 500;
+	text-decoration: none;
+	color: $color-slate-300;
+	transition: color 0.2s;
+
+	&:hover {
+		color: $color-brand-accent;
+	}
+}
+
+.nav-link-cta {
+	background-color: $color-brand-accent;
+	color: $color-brand-darker;
+	padding: $spacing-2 $spacing-5;
+	border-radius: $radius-md;
+	font-weight: bold;
+	font-size: 0.875rem;
+	text-decoration: none;
+	transition: background-color 0.2s;
+
+	&:hover {
+		background-color: $color-white;
+	}
+}
+
+.nav-mobile-btn {
+	display: block;
+	background: none;
+	border: none;
+	color: #d1d5db;
+	cursor: pointer;
+	font-size: 1.5rem;
+	padding: $spacing-2;
+
+	@media (min-width: $breakpoint-md) {
+		display: none;
+	}
+
+	&:hover {
+		color: $color-white;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.nav-mobile-menu {
+	background-color: $color-brand-surface;
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
+	padding: $spacing-2;
+
+	@media (min-width: $breakpoint-md) {
+		display: none;
+	}
+
+	&.hidden {
+		display: none;
+	}
+}
+
+.nav-mobile-menu-inner {
+	display: flex;
+	flex-direction: column;
+	gap: $spacing-1;
+
+	@media (min-width: $breakpoint-sm) {
+		padding: 0 $spacing-3;
+	}
+}
+
+.nav-mobile-link {
+	display: block;
+	padding: $spacing-2 $spacing-3;
+	border-radius: $radius-md;
+	font-size: 1rem;
+	font-weight: 500;
+	text-decoration: none;
+	color: $color-slate-300;
+	transition: color 0.2s;
+
+	&:hover {
+		color: $color-brand-accent;
+	}
+
+	&.tech:hover {
+		color: $color-brand-tech;
+	}
+
+	&.green:hover {
+		color: $color-green-400;
+	}
+
+	&.cta {
+		font-weight: bold;
+		color: $color-brand-accent;
+	}
+}

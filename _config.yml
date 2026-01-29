@@ -34,11 +34,6 @@ theme:
 plugins:
   - jekyll-feed
 
-# Sass/SCSS configuration
-sass:
-  sass_dir: assets/css
-  style: compressed
-  sourcemap: development
 
 # Exclude from processing.
 # The following items will not be processed, by default.

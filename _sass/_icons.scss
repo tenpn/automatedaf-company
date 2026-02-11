@@ -3,7 +3,12 @@
     height: 256px;
     background-size: cover;
     position: absolute;
+    visibility:hidden;
     margin: -32px 0 0 -256px;
+
+    @media (min-width: $breakpoint-xl) {
+        visibility:visible;
+	}
 }
 
 .icon-cog {

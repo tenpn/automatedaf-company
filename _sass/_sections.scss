@@ -1,7 +1,11 @@
 // Section Styles
 
 .section {
-	padding: $spacing-24 0;
+	padding: $spacing-8 0;
+
+	@media (min-width: $breakpoint-lg) {
+		padding: $spacing-24 0;
+	}
 }
 
 .section-border {
@@ -9,7 +13,7 @@
 }
 
 .section-bg {
-	background-color: $color-brand-surface
+	background-color: $color-brand-surface;
 }
 
 section#tech {

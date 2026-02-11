@@ -9,24 +9,9 @@
     transition: border-color 0.2s;
 
     &:hover {
-        border-color: rgba(34, 197, 94, 0.3);
+        border: 2px dashed rgba(255, 255, 255, 0.1);
+        border-color: rgba(182, 182, 182, 0.3);
     }
-}
-
-.card-dark {
-    background-color: $color-brand-darker;
-    padding: $spacing-8;
-    // border-radius: $radius-xl;
-    border: 2px solid rgba(255, 255, 255, 0.05);
-    transition: border-color 0.2s;
-}
-
-.card-accent:hover {
-    border-color: rgba(245, 158, 11, 0.3);
-}
-
-.card-tech:hover {
-    border-color: rgba(14, 233, 186, 0.3);
 }
 
 .card-flex {
@@ -53,9 +38,7 @@
 // Testimonial
 .testimonial {
     background: rgba(24, 139, 86, 0.1);
-    backdrop-filter: blur(10px);
     padding: $spacing-6;
-    // border-radius: $radius-lg;
     border-left: 4px solid $color-brand-accent;
     position: relative;
 }
@@ -87,7 +70,6 @@
 .testimonial-avatar {
     width: 2rem;
     height: 2rem;
-    // border-radius: $radius-full;
     background-color: $color-slate-600;
 }
 

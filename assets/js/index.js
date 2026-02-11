@@ -15,3 +15,6 @@ menu.querySelectorAll('a').forEach(link => {
 });
 
 
+document.querySelectorAll('video').forEach(video => {
+	video.playbackRate = .3;
+});

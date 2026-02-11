@@ -1,38 +1,88 @@
 <section id="contact" class="footer-section">
-	<div class="footer-grid bg-grid"></div>
-	<div class="footer-content">
-		<h2 class="footer-title">Ready to Automate?</h2>
-		<p class="footer-description">
-			Whether you need a quick pipeline fix or a long-term build engineering partner, let's talk about how to make your development process boringly predictable.
-		</p>
+    <div class="footer-grid bg-grid"></div>
+    <div class="footer-content">
+        <h2 class="footer-title">Ready to Automate?</h2>
+        <p class="footer-description">
+            Whether you need a quick pipeline fix or a long-term build engineering partner, let's talk about how to make your development process boringly predictable.
+        </p>
 
-		<form class="footer-form" onsubmit="event.preventDefault(); alert('Message sent! (This is a demo)');">
-			<div class="form-group">
-				<label for="email" class="sr-only">Email</label>
-				<input type="email" id="email" class="form-input" placeholder="enter_your@email.com">
-			</div>
-			<div class="form-group">
-				<label for="message" class="sr-only">Message</label>
-				<textarea id="message" rows="4" class="form-textarea" placeholder="Tell us about your studio's needs..."></textarea>
-			</div>
-			<button type="submit" class="form-submit">
-				CONTACT
-			</button>
-		</form>
+        <form class="footer-form" id="contactForm">
+            <div class="form-group">
+                <label for="name" class="sr-only">Your Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="message" class="sr-only">Message</label>
+                <textarea id="message" name="message" rows="4" class="form-textarea" placeholder="Tell us about your studio's needs..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+                CONTACT
+            </button>
+        </form>
 
-		<div class="flex items-center justify-center mt-16">
-			{% include elements/logo_large.html %}
-		</div>
+        <div class="flex items-center justify-center mt-16">
+            {% include elements/logo_large.html %}
+        </div>
 
-		<div class="footer-bottom">
-			<div>
-				&copy; {{ site.time | date: '%Y' }} Automated AF. All rights reserved.
-			</div>
-			<div class="footer-social">
-				<a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
-				<a href="#" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
-				<a href="#" class="footer-social-link"><i class="fab fa-github"></i></a>
-			</div>
-		</div>
-	</div>
+        <div class="footer-bottom">
+            <div>
+                &copy; {{ site.time | date: '%Y' }} Automated AF. All rights reserved.
+            </div>
+            <div class="footer-social">
+                <a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="footer-social-link"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
 </section>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const nameInput = document.getElementById('name');
+    const messageInput = document.getElementById('message');
+    const userName = nameInput.value.trim();
+    const message = messageInput.value.trim();
+    
+    // Clear previous error states
+    nameInput.classList.remove('form-input-error');
+    messageInput.classList.remove('form-input-error');
+    
+    const isNameValid = userName.length > 0;
+    const isMessageValid = message.length > 0;
+    
+    // Show error states if invalid
+    if (!isNameValid) {
+        nameInput.classList.add('form-input-error');
+    }
+    if (!isMessageValid) {
+        messageInput.classList.add('form-input-error');
+    }
+    
+    if (!isNameValid || !isMessageValid) {
+        return;
+    }
+    
+    // Decrypt email address
+    const encryptedEmail = 'aGVsbG9AYXV0b21hdGVkYWYuZGV2';
+    const toEmail = atob(encryptedEmail);
+    const subject = encodeURIComponent('Contact Form Submission');
+    const body = encodeURIComponent(`${message}\n\nFrom: ${userName}`);
+    
+    window.location.href = `mailto:${toEmail}?subject=${subject}&body=${body}`;
+
+	nameInput.value = '';
+	messageInput.value = '';
+
+});
+
+// Real-time validation feedback
+document.getElementById('name').addEventListener('input', function() {
+    this.classList.remove('form-input-error');
+});
+document.getElementById('message').addEventListener('input', function() {
+    this.classList.remove('form-input-error');
+});
+</script>

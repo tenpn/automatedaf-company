@@ -27,6 +27,7 @@ baseurl: "/automatedaf-company"
 url: "https://automatedaf.dev"
 logo: /assets/logo_automatedaf_color_trans.png
 
+
 # Build settings
 plugins:
   - jekyll-feed

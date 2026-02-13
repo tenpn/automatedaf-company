@@ -13,8 +13,3 @@ menu.querySelectorAll('a').forEach(link => {
 		menu.classList.add('hidden');
 	});
 });
-
-
-document.querySelectorAll('video').forEach(video => {
-	video.playbackRate = .3;
-});

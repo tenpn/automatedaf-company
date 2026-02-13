@@ -26,6 +26,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "/automatedaf-company" 
 url: "https://automatedaf.dev"
 logo: /assets/logo_automatedaf_color_trans.png
+og_image: /assets/og_image.png
 
 
 # Build settings

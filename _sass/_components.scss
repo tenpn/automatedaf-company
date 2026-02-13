@@ -175,6 +175,32 @@
     user-select: none;
 }
 
+.icon {
+    opacity: 0;
+    animation: fadeIn 0.6s ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: entry 30% cover 80%;
+}
+
+@keyframes fadeIn {
+    0% {
+        translate: 0 100px;
+        transform: scale(0.6);
+        opacity: 0;
+    }
+    80% {
+        translate: 0 50px;
+        transform: scale(1.05);
+        opacity: 1;
+    }
+
+    100% {
+        translate: 0 0;
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 video.flex {
     width: 100%;
     height: auto;

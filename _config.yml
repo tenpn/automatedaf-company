@@ -23,8 +23,8 @@ email: hello@automatedaf.dev
 tagline: Professional build engineering, QA automation, and training for video game studios. 
 description: >- # this means to ignore newlines until "baseurl:"
   Professional build engineering, QA automation, and training for video game studios. We handle the boring stuff so you can ship the fun stuff.
-baseurl: "/automatedaf-company" 
-url: "https://automatedaf.dev"
+baseurl: "" 
+url: "hhttps://tenpn.github.io/automatedaf-company/"
 logo: /assets/logo_automatedaf_color_trans.png
 og_image: /assets/og_image.png
 

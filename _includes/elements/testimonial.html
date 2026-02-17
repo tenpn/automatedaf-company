@@ -1,4 +1,8 @@
 <div class="testimonial testimonial-tech">
+	{% if include.logo %}
+		<a class="testimonial-logo" href="{{ include.url }}" target="_blank" rel="noopener noreferrer"  style="background-image: url('{{ include.logo }}');">
+		</a>
+	{% endif %}
 	<i class="fas fa-quote-right testimonial-quote"></i>
 	<p class="testimonial-text">"{{ include.text }}"</p>
 	<div class="testimonial-author">

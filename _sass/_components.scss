@@ -70,13 +70,18 @@
 .testimonial-logo {
     bottom: 5%;
     right: 5%;
-    width: 50%;
-    height: 50%;
+    width: 130px;
+    height: 100px;
     position: absolute;
-    background-position: right;
+    background-position: right bottom;
     background-size: contain;
-    opacity: .3;
     background-repeat: no-repeat;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+    &:hover {
+        opacity: 1;
+        filter: brightness(1.2);
+    }
 }
 
 .testimonial-name {

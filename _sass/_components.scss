@@ -67,10 +67,16 @@
     gap: $spacing-3;
 }
 
-.testimonial-avatar {
-    width: 2rem;
-    height: 2rem;
-    background-color: $color-slate-600;
+.testimonial-logo {
+    bottom: 5%;
+    right: 5%;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    background-position: right;
+    background-size: contain;
+    opacity: .3;
+    background-repeat: no-repeat;
 }
 
 .testimonial-name {
@@ -83,6 +89,8 @@
     font-size: 0.75rem;
     color: $color-slate-500;
 }
+
+
 
 // Code Block
 .code-block {

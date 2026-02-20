@@ -46,6 +46,12 @@
 	&:hover > * {
 		color: $color-white !important;
 	}
+	
+	user-select: none;
+	
+    > * {
+		user-select: none;
+	}
 }
 
 .nav-desktop {

@@ -2,219 +2,226 @@
 
 // Card Styles
 .card {
-    background-color: $color-brand-surface;
-    padding: $spacing-8;
-    // border-radius: $radius-xl;
-    border: 2px solid rgba(255, 255, 255, 0.05);
-    transition: border-color 0.2s;
+  background-color: $color-brand-surface;
+  padding: $spacing-8;
+  // border-radius: $radius-xl;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  transition: border-color 0.2s;
 
-    &:hover {
-        border: 2px dashed rgba(255, 255, 255, 0.1);
-        border-color: rgba(182, 182, 182, 0.3);
-    }
+  &:hover {
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+    border-color: rgba(182, 182, 182, 0.3);
+  }
 }
 
 .card-flex {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 // Icon Box
 .icon-box {
-    width: 3rem;
-    height: 3rem;
-    // border-radius: $radius-md;
-    background-color: rgba(245, 158, 11, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: $spacing-6;
+  width: 3rem;
+  height: 3rem;
+  // border-radius: $radius-md;
+  background-color: rgba(245, 158, 11, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $spacing-6;
 }
 
 .icon-box-tech {
-    background-color: rgba(14, 165, 233, 0.1);
+  background-color: rgba(14, 165, 233, 0.1);
 }
 
 // Testimonial
 .testimonial {
-    background: rgba(24, 139, 86, 0.1);
-    padding: $spacing-6;
-    border-left: 4px solid $color-brand-accent;
-    position: relative;
+  background: rgba(24, 139, 86, 0.1);
+  padding: $spacing-6;
+  border-left: 4px solid $color-brand-accent;
+  position: relative;
 }
 
 .testimonial-tech {
-    border-left-color: $color-brand-tech;
+  border-left-color: $color-brand-tech;
 }
 
 .testimonial-quote {
-    position: absolute;
-    top: $spacing-4;
-    right: $spacing-4;
-    color: rgba(255, 255, 255, 0.05);
-    font-size: 2.25rem;
+  position: absolute;
+  top: $spacing-4;
+  right: $spacing-4;
+  color: rgba(255, 255, 255, 0.05);
+  font-size: 2.25rem;
 }
 
 .testimonial-text {
-    font-style: italic;
-    color: $color-slate-300;
-    margin-bottom: $spacing-4;
+  font-style: italic;
+  color: $color-slate-300;
+  margin-bottom: $spacing-4;
+}
+
+.testimonial-footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: $spacing-3;
+  display: flex;
+  align-items: center;
+  gap: $spacing-3;
 }
 
 .testimonial-logo {
-    bottom: 5%;
-    right: 5%;
-    width: 130px;
-    height: 100px;
-    position: absolute;
-    background-position: right bottom;
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: all 0.3s ease;
-    opacity: 0.8;
-    &:hover {
-        opacity: 1;
-        filter: brightness(1.2);
-    }
+  width: 100px;
+  height: 80px;
+  flex-shrink: 0;
+  margin-top: 1em;
+  background-position: right top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+    filter: brightness(1.2);
+  }
 }
 
 .testimonial-name {
-    font-size: 0.875rem;
-    font-weight: bold;
-    color: $color-white;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: $color-white;
 }
 
 .testimonial-role {
-    font-size: 0.75rem;
-    color: $color-slate-500;
+  font-size: 0.75rem;
+  color: $color-slate-500;
 }
-
-
 
 // Code Block
 .code-block {
-    background-color: $color-brand-darker;
-    padding: $spacing-4;
-    // border-radius: $radius-md;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    font-family: $font-mono;
-    font-size: 0.75rem;
-    color: $color-green-400;
+  background-color: $color-brand-darker;
+  padding: $spacing-4;
+  // border-radius: $radius-md;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  color: $color-green-400;
 }
 
 // Training Testimonial
 .training-testimonial {
-    margin-top: $spacing-12;
-    background: rgba(24, 139, 86, 0.1);
-    backdrop-filter: blur(10px);
-    padding: $spacing-8;
-    border-radius: $radius-xl;
-    text-align: center;
-    max-width: 48rem;
-    margin-left: auto;
-    margin-right: auto;
+  margin-top: $spacing-12;
+  background: rgba(24, 139, 86, 0.1);
+  backdrop-filter: blur(10px);
+  padding: $spacing-8;
+  border-radius: $radius-xl;
+  text-align: center;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // Form Components
 .form-group {
-    margin-bottom: $spacing-4;
+  margin-bottom: $spacing-4;
 }
 
 .form-input {
-    width: 100%;
-    background-color: $color-brand-surface;
-    border: 1px solid $color-slate-700;
-    border-radius: $radius-md;
-    padding: $spacing-4;
-    color: $color-white;
-    font-family: $font-sans;
-    transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  background-color: $color-brand-surface;
+  border: 1px solid $color-slate-700;
+  border-radius: $radius-md;
+  padding: $spacing-4;
+  color: $color-white;
+  font-family: $font-sans;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
 
-    &:focus {
-        border-color: $color-brand-accent;
-        box-shadow: 0 0 0 1px $color-brand-accent;
-        outline: none;
-    }
+  &:focus {
+    border-color: $color-brand-accent;
+    box-shadow: 0 0 0 1px $color-brand-accent;
+    outline: none;
+  }
 }
 
 .form-textarea {
-    width: 100%;
-    background-color: $color-brand-surface;
-    border: 1px solid $color-slate-700;
-    border-radius: $radius-md;
-    padding: $spacing-4;
-    color: $color-white;
-    font-family: $font-sans;
-    resize: vertical;
-    transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  background-color: $color-brand-surface;
+  border: 1px solid $color-slate-700;
+  border-radius: $radius-md;
+  padding: $spacing-4;
+  color: $color-white;
+  font-family: $font-sans;
+  resize: vertical;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
 
-    &:focus {
-        border-color: $color-brand-accent;
-        box-shadow: 0 0 0 1px $color-brand-accent;
-        outline: none;
-    }
+  &:focus {
+    border-color: $color-brand-accent;
+    box-shadow: 0 0 0 1px $color-brand-accent;
+    outline: none;
+  }
 }
 
 .form-input-error {
-    border-color: #ef4444 !important;
-    box-shadow: 0 0 0 1px #ef4444 !important;
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 1px #ef4444 !important;
 }
 
 .form-submit {
-    width: 100%;
-    background-color: $color-brand-accent;
-    color: $color-brand-darker;
-    font-weight: bold;
-    padding: $spacing-4;
-    border-radius: $radius-md;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    font-size: 1rem;
+  width: 100%;
+  background-color: $color-brand-accent;
+  color: $color-brand-darker;
+  font-weight: bold;
+  padding: $spacing-4;
+  border-radius: $radius-md;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 1rem;
 
-    &:hover {
-        background-color: $color-white;
-    }
+  &:hover {
+    background-color: $color-white;
+  }
 }
 
 .icon {
-    pointer-events: none;
-    user-select: none;
+  pointer-events: none;
+  user-select: none;
 }
 
 .icon {
-    opacity: 0;
-    animation: fadeIn 0.6s ease-in-out forwards;
-    animation-timeline: view();
-    animation-range: entry 30% cover 80%;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-in-out forwards;
+  animation-timeline: view();
+  animation-range: entry 30% cover 80%;
 }
 
 @keyframes fadeIn {
-    0% {
-        translate: 0 100px;
-        transform: scale(0.6);
-        opacity: 0;
-    }
-    80% {
-        translate: 0 50px;
-        transform: scale(1.05);
-        opacity: 1;
-    }
+  0% {
+    translate: 0 100px;
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  80% {
+    translate: 0 50px;
+    transform: scale(1.05);
+    opacity: 1;
+  }
 
-    100% {
-        translate: 0 0;
-        transform: scale(1);
-        opacity: 1;
-    }
+  100% {
+    translate: 0 0;
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 video.flex {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }

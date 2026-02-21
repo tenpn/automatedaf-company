@@ -1,14 +1,16 @@
 <div class="testimonial testimonial-tech">
-	{% if include.logo %}
-		<a class="testimonial-logo" href="{{ include.url }}" target="_blank" rel="noopener noreferrer"  style="background-image: url('{{ include.logo }}');">
-		</a>
-	{% endif %}
 	<i class="fas fa-quote-right testimonial-quote"></i>
 	<p class="testimonial-text">"{{ include.text }}"</p>
-	<div class="testimonial-author">
-		<div>
-			<p class="testimonial-name">{{ include.name }}</p>
-			<p class="testimonial-role">{{ include.role }}</p>
+	<div class="testimonial-footer">
+		<div class="testimonial-author">
+			<div>
+				<p class="testimonial-name">{{ include.name }}</p>
+				<p class="testimonial-role">{{ include.role }}</p>
+			</div>
 		</div>
+		{% if include.logo %}
+			<a class="testimonial-logo" href="{{ include.url }}" target="_blank" rel="noopener noreferrer" style="background-image: url('{{ include.logo }}');">
+			</a>
+		{% endif %}
 	</div>
 </div>

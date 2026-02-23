@@ -1,35 +1,115 @@
 .icon {
-    width: 256px;
-    height: 256px;
-    background-size: cover;
-    position: absolute;
-    visibility:hidden;
-    margin: -32px 0 0 -256px;
+	width: 220px;
+	height: 220px;
+	display: block;
+	pointer-events: none;
+	user-select: none;
+	position: absolute;
+	left: 50%;
+	margin: -110px auto;
+	transform: translateX(-50%);
 
-    @media (min-width: $breakpoint-xl) {
-        visibility:visible;
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-color: $color-brand-darker;
+		border: 1px solid;
+		transform: rotate(45deg) scale(0.7);
+		z-index: -1;
+	}
+
+	&::after{
+		content: '';
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		position: relative;
+		display: block;
+
 	}
 }
 
 .icon-cog {
-    background-image: url("/assets/icon_cog.png");
+	&::after {
+		background-image: url("../icon_cog.png");
+	}
 }
 
 .icon-heart {
-    background-image: url("/assets/icon_heart.png");
+	&::after {
+		background-image: url("../icon_heart.png");
+		top: 5px;
+		scale: 90%;
+	}
 }
 
+.icon-rocket {
+	&::after {
+		background-image: url("../icon_rocket.png");
+		left: -24px;
+   		top: 15px;
+	}
+}
+
+.section-padded {
+	padding-top: 12rem;
+	padding-bottom: 12rem;
+}
+
+.section-padded-btm {
+	padding-bottom: 12rem;
+}
+
+.icon-xl {
+	position: absolute;
+	margin: -32px 0 0 -256px;
+	display: none;
+	
+	@media (min-width: $breakpoint-xl) {
+		display: block;
+		
+	}
+
+	// opacity: 0;
+	// animation: fadeIn 0.6s ease-in-out forwards;
+	// animation-timeline: view();
+	// animation-range: entry 30% cover 80%;
+
+}
+
+
+@keyframes fadeIn {
+  0% {
+	translate: 0 100px;
+	transform: scale(0.6);
+	opacity: 0;
+  }
+  80% {
+	translate: 0 50px;
+	transform: scale(1.05);
+	opacity: 1;
+  }
+
+  100% {
+	translate: 0 0;
+	transform: scale(1);
+	opacity: 1;
+  }
+}
+
+
 img.icon-small{
-    max-height: 80px;
-    max-width: 200px
+	max-height: 80px;
+	max-width: 200px
 }
 
 .icons-list {
-    display: flex;
-    flex-flow: wrap;
-    align-items: center;
-    justify-content: center;
-    > img {
-        margin: 1.25rem 1.5rem;
-    }
+	display: flex;
+	flex-flow: wrap;
+	align-items: center;
+	justify-content: center;
+	> img {
+		margin: 1.25rem 1.5rem;
+	}
 }

@@ -5,6 +5,14 @@
     text-align: center;
 }
 
+.text-center-sm{
+
+    @media (max-width: $breakpoint-md) {
+        text-align: center;
+
+    }
+}
+
 .text-white {
     color: $color-white;
 }
@@ -27,6 +35,10 @@
 
 .text-brand-tech {
     color: $color-brand-tech !important;
+}
+
+.text-brand-error {
+    color: $color-brand-error !important;
 }
 
 .text-green-400 {

@@ -3,6 +3,7 @@ $color-brand-dark: #2c2c2c;
 $color-brand-darker: #0f0f0f;
 $color-brand-accent: #f59e0b;
 $color-brand-tech: rgb(24, 139, 86);
+$color-brand-error: rgb(139, 24, 24);
 $color-brand-surface: #181818;
 $color-slate-300: #e6e6e6;
 $color-slate-400: #b9b9b9;
@@ -43,7 +44,7 @@ $radius-full: 0;
 $breakpoint-sm: 640px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
-$breakpoint-xl: 1280px;
+$breakpoint-xl: 1680px;
 
 // Container max-width
 $container-max-width: 80rem;

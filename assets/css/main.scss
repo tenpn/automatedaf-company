@@ -3,14 +3,14 @@
 # only Main files contain this front matter, not partials.
 ---
 
-@import 'variables';
-@import 'global';
-@import 'typography';
-@import 'layout';
-@import 'components';
-@import 'navigation';
-@import 'hero';
-@import 'sections';
-@import 'footer';
-@import 'icons';
-@import 'blocks';
+@use 'variables';
+@use 'global';
+@use 'typography';
+@use 'layout';
+@use 'components';
+@use 'navigation';
+@use 'hero';
+@use 'sections';
+@use 'footer';
+@use 'icons';
+@use 'blocks';

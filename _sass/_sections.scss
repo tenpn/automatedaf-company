@@ -1,4 +1,4 @@
-@use 'variables' as *;
+@use "variables" as *;
 
 // Section Styles
 
@@ -27,6 +27,13 @@ section#build {
 
 section#training {
   background-image: url("../bg_unity_editor_01.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+section#who {
+  background-image: url("../bg_code.png");
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;

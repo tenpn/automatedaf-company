@@ -7,7 +7,7 @@ description: "Test automation workshops for game studios — Unreal, Unity, and 
 hide_nav_sections: true
 ---
 
-<section class="section section-border section-padded">
+<section id="workshops-intro" class="section section-border section-padded">
 	<div class="container">
 		<div class="text-center mb-16">
 			<h2 class="title-xl">Test Automation Workshops</h2>
@@ -61,25 +61,44 @@ hide_nav_sections: true
 				<div class="card">
 					<h4 class="subheading text-brand-accent"><i class="fas fa-file-circle-check"></i> Asset Tests</h4>
 					<p class="text-sm text-slate-400">Looking for configuration problems on-disk and
-						<span class="text-white">scaling with new data</span></p>
+						<span class="text-white">scaling with new data</span>
+					</p>
 				</div>
 				<div class="card">
 					<h4 class="subheading text-brand-accent"><i class="fas fa-gamepad"></i> Smoke Tests</h4>
 					<p class="text-sm text-slate-400">Pragmatically exploring the game from the
-						<span class="text-white">player's point of view</span></p>
+						<span class="text-white">player's point of view</span>
+					</p>
 				</div>
 				<div class="card">
 					<h4 class="subheading text-brand-accent"><i class="fas fa-cube"></i> Actor Tests</h4>
 					<p class="text-sm text-slate-400">Rapidly testing gameplay logic
-						<span class="text-white">in isolation</span></p>
+						<span class="text-white">in isolation</span>
+					</p>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
+<!-- Testimonials -->
+<section class="section section-border section-padded">
+	<div class="container">
+		<div class="grid-2 max-w-3xl mx-auto">
+			{% include elements/testimonial.html
+			text="Placeholder testimonial"
+			name="Name"
+			role="Role, Studio" %}
+			{% include elements/testimonial.html
+			text="Placeholder testimonial"
+			name="Name"
+			role="Role, Studio" %}
+		</div>
+	</div>
+</section>
+
 <!-- Workshop Formats -->
-<section class="section section-bg section-padded">
+<section class="section section-bg section-padded" id="build">
 	<div class="container">
 		<div class="grid-12">
 			<div class="col-span-4 mb-12">
@@ -149,18 +168,37 @@ hide_nav_sections: true
 	</div>
 </section>
 
-<!-- Upcoming Public Workshops -->
+<!-- Testimonials -->
 <section class="section section-border section-padded">
+	<div class="container">
+		<div class="grid-2 max-w-3xl mx-auto">
+			{% include elements/testimonial.html
+			text="Placeholder testimonial"
+			name="Name"
+			role="Role, Studio" %}
+			{% include elements/testimonial.html
+			text="Placeholder testimonial"
+			name="Name"
+			role="Role, Studio" %}
+		</div>
+	</div>
+</section>
+
+<!-- Upcoming Public Workshops -->
+<section class="section section-border section-padded" id="training">
 	<div class="container">
 		<div class="text-center mb-12">
 			<h2 class="title-lg">Public Workshops</h2>
 			<p class="text-slate-400 max-w-3xl mx-auto">
 				No scheduled workshops at the moment. Follow us on
-				<a href="https://www.linkedin.com/company/automated-af-consultancy" class="text-brand-accent">LinkedIn</a>
+				<a href="https://www.linkedin.com/company/automated-af-consultancy"
+					class="text-brand-accent">LinkedIn</a>
 				to be notified when new dates are announced, or
-				<a href="{{ '/#contact' | absolute_url }}" class="text-brand-accent">get in touch</a>
+				<a href="#contact" class="text-brand-accent">get in touch</a>
 				to arrange a private workshop for your studio.
 			</p>
 		</div>
 	</div>
 </section>
+
+{% include sections/contact.html %}

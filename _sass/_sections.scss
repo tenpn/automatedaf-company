@@ -59,6 +59,18 @@ section#who {
   }
 }
 
+section#workshops-intro {
+  background-image: url("../bg_level.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  padding-top: $spacing-20;
+
+  @media (min-width: $breakpoint-lg) {
+    padding-top: 8rem;
+  }
+}
+
 section#contact {
   background-image: url("../bg_level.png");
   background-attachment: fixed;

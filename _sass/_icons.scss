@@ -32,6 +32,14 @@
 	}
 }
 
+.icon-inline {
+	position: relative;
+	left: auto;
+	margin: 0;
+	transform: none;
+	isolation: isolate;
+}
+
 .icon-cog {
 	&::after {
 		background-image: url("../icon_cog.png");

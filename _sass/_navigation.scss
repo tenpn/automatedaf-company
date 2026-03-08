@@ -40,6 +40,7 @@
 	letter-spacing: -0.05em;
 	display: flex;
 	align-items: center;
+	text-decoration: none;
 	.logo-grid{
 		margin-right: $spacing-2;
 		scale: 0.6;
@@ -60,12 +61,13 @@
 	display: none;
 
 	@media (min-width: $breakpoint-md) {
-		display: block;
+		display: flex;
+		flex: 1;
+		justify-content: flex-end;
 	}
 }
 
 .nav-menu {
-	margin-left: $spacing-10;
 	display: flex;
 	align-items: baseline;
 	gap: $spacing-8;

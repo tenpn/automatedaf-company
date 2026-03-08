@@ -1,19 +1,21 @@
 <nav class="nav-container">
 	<div class="nav-inner">
 		<div class="nav-content">
-			<div class="nav-logo" onclick="window.scrollTo(0,0)">
+			<a href="{{ '/' | absolute_url }}" class="nav-logo">
 				{% include elements/logo_small.html %}
 				<div class="nav-logo-text">
 					<span class="text-brand-tech">AUTOMATED</span><span class="text-brand-accent font-bold">AF</span>
 				</div>
-			</div>
+			</a>
 
 			<!-- Desktop Menu -->
 			<div class="nav-desktop">
 				<div class="nav-menu">
+					{% unless page.hide_nav_sections %}
 					<a href="{{ '/#build' | absolute_url }}" class="nav-link">Build Engineering</a>
 					<a href="{{ '/#qa' | absolute_url }}" class="nav-link tech">QA Engineering</a>
 					<a href="{{ '/#training' | absolute_url }}" class="nav-link green">Training</a>
+					{% endunless %}
 					<a href="{{ '/#contact' | absolute_url }}" class="nav-link-cta">Contact Us</a>
 				</div>
 			</div>
@@ -30,9 +32,11 @@
 	<!-- Mobile Menu Panel -->
 	<div id="mobile-menu" class="nav-mobile-menu hidden">
 		<div class="nav-mobile-menu-inner">
+			{% unless page.hide_nav_sections %}
 			<a href="{{ '/#build' | absolute_url }}" class="nav-mobile-link">Build Engineering</a>
 			<a href="{{ '/#qa' | absolute_url }}" class="nav-mobile-link tech">QA Engineering</a>
 			<a href="{{ '/#training' | absolute_url }}" class="nav-mobile-link green">Training</a>
+			{% endunless %}
 			<a href="{{ '/#contact' | absolute_url }}" class="nav-mobile-link cta">Contact Us</a>
 		</div>
 	</div>

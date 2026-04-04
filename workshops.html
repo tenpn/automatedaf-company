@@ -25,9 +25,20 @@ hide_nav_sections: true
 					engine.
 				</p>
 			</div>
+
 		</div>
 		<div class="grid-12">
-			<div class="col-span-4"></div>
+			<div class="col-span-4">
+				<div class="mt-16">
+					{% include elements/testimonial.html
+					text="Even fairly late in the project lifecycle, we were able to hugely improve build health, and
+					are saving hours of dev and
+					tester time every day"
+					name="Daniel Gronner"
+					role="Lead QA, Nosebleed Interactive" logo="assets/nosebleed-logo.png"
+					url="https://www.nosebleedinteractive.com"%}
+				</div>
+			</div>
 
 			<!-- Right: Syllabus and test types -->
 			<div class="col-span-8 space-y-8">
@@ -91,27 +102,8 @@ hide_nav_sections: true
 	</div>
 </section>
 
-<!-- Testimonials -->
-<section class="section section-border section-padded">
-	<div class="container">
-		<div class="grid-2 max-w-3xl mx-auto">
-			{% include elements/testimonial.html
-			text="Even fairly late in the project lifecycle, we were able to hugely improve build health, and are saving
-			hours of dev and tester time every day"
-			name="Daniel Gronner"
-			logo="assets/nosebleed-logo.png"
-			role="QA Lead, Nosebleed Interactive" %}
-			{% include elements/testimonial.html
-			text="​We were delighted with the progress made and are keen to leverage the new skills and processes."
-			name="Bruce Heather"
-			logo="assets/tym_logo_bubble_800px.png"
-			role="Technical Director, Teach Your Monster" %}
-		</div>
-	</div>
-</section>
-
 <!-- Workshop Formats -->
-<section class="section section-bg section-padded" id="build">
+<section class="section section section-padded">
 	<div class="container">
 		<div class="grid-12">
 			<div class="col-span-4 mb-12">
@@ -121,6 +113,14 @@ hide_nav_sections: true
 						Choose the format that fits your team's schedule and goals. Both workshops can be
 						<span class="text-white font-bold">tailored for your studio</span>.
 					</p>
+				</div>
+				<div class="mt-16">
+					{% include elements/testimonial.html
+					text="​We were delighted with the progress made and are keen to leverage the new skills and
+					processes."
+					name="Bruce Heather"
+					logo="assets/tym_logo_bubble_800px.png"
+					role="Technical Director, Teach Your Monster" %}
 				</div>
 			</div>
 
@@ -154,7 +154,7 @@ hide_nav_sections: true
 				<!-- 3-Day -->
 				<div class="card">
 					<h3 class="heading-flex">
-						<i class="fas fa-layer-group text-brand-tech"></i> 3-Day Deep Dive
+						<i class="fas fa-layer-group text-brand-tech"></i> 3-Day Masterclass
 					</h3>
 					<p class="text-slate-400 mb-4">
 						Everything in the crash course, plus time spent working directly on
@@ -181,40 +181,38 @@ hide_nav_sections: true
 	</div>
 </section>
 
-<!-- Testimonials -->
-<section class="section section-border section-padded">
+<section class="section section-bg section-padded" id="build">
 	<div class="container">
-		<div class="grid-2 max-w-3xl mx-auto">
-			{% include elements/testimonial.html
-			text="Andrew is friendly and helpful to work with, good at gently steering us back toward best practice, but
-			also pragmatic about giving us the maximum value from our time - as a small team who are also working on
-			every other part of the game."
-			name="Neil Goodman"
-			role="Lead Developer, Nerial" logo="assets/logo_nerial_transparent_notext.png"
-			url="https://www.nerial.co.uk"%}
-			{% include elements/testimonial.html
-			text="Placeholder testimonial"
-			name="Name"
-			role="Role, Studio" %}
+		<div class="grid-12">
+			<div class="col-span-4 mb-12">
+				<div class="text-center-sm">
+					<h2 class="title-lg">Public Workshops</h2>
+					<p class="text-slate-400">
+						Get a strong foundation in test automation in your enigne of choice, alongside peers from the
+						games industry.
+					</p>
+				</div>
+				<div class="mt-16">
+					{% include elements/testimonial.html
+					text="Automated AF are good at gently steering us back toward best
+					practice, but
+					also pragmatic about giving us the maximum value from our time - as a small team who are also
+					working on
+					every other part of the game."
+					name="Neil Goodman"
+					role="Lead Developer, Nerial" logo="assets/logo_nerial_transparent_notext.png"
+					url="https://www.nerial.co.uk"%}
+				</div>
+			</div>
+
+			<div class="col-span-8 space-y-8">
+				<iframe src="https://luma.com/embed/calendar/cal-sJenOpWVjE4YQvi/events?lt=dark" width="100%"
+					height="450" frameborder="0" style="border: 1px solid #bfcbda88; border-radius: 4px;"
+					allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
 		</div>
 	</div>
 </section>
 
-<!-- Upcoming Public Workshops -->
-<section class="section section-border section-padded" id="training">
-	<div class="container">
-		<div class="text-center mb-12">
-			<h2 class="title-lg">Public Workshops</h2>
-			<p class="text-slate-400 max-w-3xl mx-auto">
-				No scheduled workshops at the moment. Follow us on
-				<a href="https://www.linkedin.com/company/automated-af-consultancy"
-					class="text-brand-accent">LinkedIn</a>
-				to be notified when new dates are announced, or
-				<a href="#contact" class="text-brand-accent">get in touch</a>
-				to arrange a private workshop for your studio.
-			</p>
-		</div>
-	</div>
-</section>
 
 {% include sections/contact.html %}

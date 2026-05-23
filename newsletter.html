@@ -1,0 +1,29 @@
+---
+layout: default
+title: "Newsletter"
+permalink: /newsletter.html
+image: /assets/og_image.png
+description: "Sign up to the Automated AF newsletter — automation tips, news, and workshop dates for game studios"
+hide_nav_sections: true
+---
+
+{% include sections/newsletter.html text="Sign up to the Automated AF newsletter for automation <span class='text-white font-bold'>tips, news,</span> and to be the first to hear about <span class='text-white font-bold'>new training events</span>." %}
+
+<section class="footer-section">
+    <div class="footer-grid bg-grid"></div>
+    <div class="footer-content">
+        <div class="flex items-center justify-center">
+            {% include elements/logo_large.html %}
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                &copy; {{ site.time | date: '%Y' }} Automated AF. All rights reserved.
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/company/automated-af-consultancy" class="footer-social-link"><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</section>

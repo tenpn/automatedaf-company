@@ -1,0 +1,54 @@
+# Public workshop cohorts.
+#
+# Each entry renders one card in the "Public Workshops" section of /workshops.
+# Cohorts whose start_date is in the past are hidden automatically — but only
+# when the site is rebuilt, so past cohorts linger until the next push/deploy.
+#
+# logo: optional engine logo shown in the card header (e.g. assets/logo_unity.png).
+#   Omit it and the card shows a text badge with the engine name instead.
+#
+# checkout_url: the Stripe Payment Link for this cohort (one link per cohort).
+#   Leave it blank, or leave REPLACE_ME in it, and the card falls back to a
+#   "get notified" button instead of a live checkout button.
+
+- id: unreal-2026-09
+  engine: Unreal
+  icon: fas fa-cube
+  accent: brand-accent
+  logo: assets/logo_unreal_small.png
+  logo_alt: Unreal Engine
+  title: Test Automation for Unreal
+  summary: >-
+    Four weekly half-days building real, maintainable tests in Unreal's various automation frameworks, alongside developers from other studios.
+  start_date: 2026-10-07
+  end_date: 2026-10-28
+  sessions: 4
+  session_day: Wednesdays
+  session_time: "3pm-5pm UTC"
+  location: Remote (Zoom)
+  seats: 8
+  price: "£1000"
+  price_note: "per seat"
+  note: '<a href="#contact" class="text-white hover:underline">Get in touch</a> for bulk discounts'
+  checkout_url: "https://book.stripe.com/7sYaEPeyL6Hl8QBfBnaEE00"
+
+- id: unity-2026-11
+  engine: Unity
+  icon: fab fa-unity
+  accent: brand-tech
+  title: Test Automation for Unity
+  logo: assets/logo_unity_small.png
+  logo_alt: Unity Engine
+  summary: >-
+    Four weekly half-days building real, maintainable tests in Unity Test Framework, alongside developers from other studios.
+  start_date: 2026-10-06
+  end_date: 2026-10-27
+  sessions: 4
+  session_day: Tuesdays
+  session_time: "3pm-5pm UTC"
+  location: Remote (Zoom)
+  seats: 8
+  price: "£1000"
+  price_note: "per seat"
+  note: '<a href="#contact" class="text-white hover:underline">Get in touch</a> for bulk discounts'
+  checkout_url: "https://book.stripe.com/eVq28jfCP0iX8QBah3aEE01"

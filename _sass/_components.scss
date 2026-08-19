@@ -196,3 +196,133 @@ video.flex {
   width: 100%;
   height: auto;
 }
+
+// Buttons
+.btn {
+  display: inline-block;
+  padding: $spacing-4 $spacing-8;
+  border-radius: $radius-md;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: $color-brand-accent;
+  color: $color-brand-darker;
+  border: 1px solid $color-brand-accent;
+
+  &:hover {
+    background-color: $color-white;
+    border-color: $color-white;
+  }
+}
+
+.btn-outline {
+  border: 1px solid $color-slate-600;
+  color: $color-slate-300;
+
+  &:hover {
+    border-color: $color-brand-accent;
+    color: $color-brand-accent;
+  }
+}
+
+// Badges
+.badge {
+  display: inline-block;
+  padding: $spacing-1 $spacing-3;
+  border: 1px solid currentColor;
+  font-family: $font-mono;
+  font-size: 0.7rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.badge-brand-accent {
+  color: $color-brand-accent;
+  background-color: rgba(245, 158, 11, 0.1);
+}
+
+.badge-brand-tech {
+  color: $color-brand-tech;
+  background-color: rgba(24, 139, 86, 0.1);
+}
+
+// Cohort cards
+.cohort-body {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-4;
+
+  @media (min-width: $breakpoint-md) {
+    gap: $spacing-8;
+  }
+}
+
+.cohort-main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.cohort-aside {
+  flex: 0 0 4rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: flex-start;
+
+  @media (min-width: $breakpoint-md) {
+    flex-basis: 7rem;
+  }
+}
+
+.cohort-logo {
+  width: 100%;
+  height: auto;
+  max-height: 9rem;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+.cohort-meta {
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-3;
+  }
+
+  i {
+    width: 1rem;
+    margin-top: 0.25rem;
+    text-align: center;
+    flex-shrink: 0;
+  }
+}
+
+.cohort-cta {
+  margin-top: 0.3125rem; // 5px
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $spacing-3;
+
+  p {
+    margin: 0;
+  }
+
+  @media (min-width: $breakpoint-sm) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing-6;
+  }
+}
+
+// Cohorts with no note need the gap the note would have provided
+.cohort-cta-gap {
+  margin-top: $spacing-4;
+}

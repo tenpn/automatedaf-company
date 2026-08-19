@@ -126,6 +126,35 @@ hide_nav_sections: true
 			</div>
 
 			<div class="col-span-8 space-y-8">
+				<!-- multi-week cohort -->
+				<div class="card">
+					<h3 class="heading-flex">
+						<i class="fas fa-bolt text-brand-tech"></i> Multiweek Cohort
+					</h3>
+					<p class="text-slate-400 mb-4">
+						Build your skills in test automation <span class="text-white font-bold">alongside a small number
+							of developers</span> from other studios.
+						You'll complete the course with a solid understanding of a range of automation
+						techniques and when best to use each.
+					</p>
+					<ul class="space-y-2 text-sm text-slate-400 list-unstyled">
+						<li class="flex items-start gap-2">
+							<i class="fas fa-check text-brand-tech mt-1"></i>
+							Four week course, with one 2-hour instructor-led session a week
+						</li>
+						<li class="flex items-start gap-2">
+							<i class="fas fa-check text-brand-tech mt-1"></i>
+							Assessments and homework to reinforce learning
+						</li>
+						<li class="flex items-start gap-2">
+							<i class="fas fa-check text-brand-tech mt-1"></i>
+							Ideal for professional development goals and building your skills
+						</li>
+					</ul>
+					<p class="text-slate-400 mb-4"> New cohorts starting every few months — <a href="#publicworkshops"
+							class="text-white hover:underline">see below</a>
+					</p>
+				</div>
 				<!-- 1-Day -->
 				<div class="card">
 					<h3 class="heading-flex">
@@ -150,8 +179,9 @@ hide_nav_sections: true
 							Ideal for teams who want to hit the ground running
 						</li>
 					</ul>
-					<p class="text-slate-400 mb-4"> Also available as a public workshop on select dates — <a
-							href="#publicworkshops" class="text-white hover:underline">see below</a>
+					<p class="text-slate-400 mb-4"> <a href="#contact" class="text-white hover:underline">Get in
+							touch</a> to schedule a date for your
+						studio
 					</p>
 				</div>
 
@@ -181,7 +211,7 @@ hide_nav_sections: true
 					</ul>
 					<p class="text-slate-400 mb-4"> <a href="#contact" class="text-white hover:underline">Get in
 							touch</a> to schedule a workshop for your
-						studio
+						team
 					</p>
 				</div>
 			</div>
@@ -189,6 +219,117 @@ hide_nav_sections: true
 	</div>
 </section>
 
+
+<!-- Public Workshops (cohorts) -->
+<section class="section section-bg section-padded" id="build">
+	<div class="container">
+		<div class="grid-12">
+			<div class="col-span-4 mb-12">
+				<div class="text-center-sm">
+					<h2 class="title-lg">Public Workshops</h2>
+					<p class="text-slate-400">
+						Join a <span class="text-white font-bold">multi-week cohort</span> and get a strong foundation
+						in test automation in your engine of choice, alongside peers from the games industry.
+					</p>
+				</div>
+				<div class="mt-16">
+					{% include elements/testimonial.html
+					text="The workshop delivers a masterclass in pragmatic testing, moving past theory to focus on
+					high-value coverage and meaningful failures."
+					name="Adam Sutcliffe"
+					url="https://gram.gs/index.html"
+					logo="assets/gram-games-logo-small.png"
+					role="Principle Software Engineer, Gram Games" %}
+				</div>
+			</div>
+
+			<div class="col-span-8 space-y-8" id="publicworkshops">
+				{% assign now = site.time | date: '%s' | plus: 0 %}
+				{% assign cohorts = site.data.cohorts | sort: 'start_date' %}
+				{% assign shown = 0 %}
+				{% for cohort in cohorts %}
+				{% assign starts = cohort.start_date | date: '%s' | plus: 0 %}
+				{% if starts < now %}{% continue %}{% endif %} {% assign shown=shown | plus: 1 %} {% assign
+					link_ready=false %} {% if cohort.checkout_url and cohort.checkout_url !='' %} {% unless
+					cohort.checkout_url contains 'REPLACE_ME' %} {% assign link_ready=true %} {% endunless %} {% endif
+					%} <div class="card">
+					<div class="cohort-body">
+						<div class="cohort-main">
+							<h3 class="heading-flex">
+								<i class="{{ cohort.icon }} text-{{ cohort.accent }}"></i> {{ cohort.title }}
+							</h3>
+							<p class="text-slate-400 mb-4">{{ cohort.summary }}</p>
+							<ul class="cohort-meta list-unstyled space-y-2 text-sm text-slate-400">
+								<li>
+									<i class="fas fa-calendar-days text-{{ cohort.accent }}"></i>
+									<span>
+										<span class="text-white font-bold">{{ cohort.start_date | date: "%-d %b" }}
+											–&nbsp;{{ cohort.end_date | date: "%-d %b %Y" }}</span>
+										· {{ cohort.sessions }} weekly sessions
+									</span>
+								</li>
+								<li>
+									<i class="fas fa-clock text-{{ cohort.accent }}"></i>
+									<span>{{ cohort.session_day }}, {{ cohort.session_time }}</span>
+								</li>
+								<li>
+									<i class="fas fa-laptop text-{{ cohort.accent }}"></i>
+									<span>{{ cohort.location }}</span>
+								</li>
+								<li>
+									<i class="fas fa-user-group text-{{ cohort.accent }}"></i>
+									<span>{{ cohort.seats }} total seats</span>
+								</li>
+							</ul>
+							{% if cohort.note and cohort.note != '' %}
+							<p class="text-sm text-brand-accent mt-4">{{ cohort.note }}</p>
+							{% endif %}
+						</div>
+						<div class="cohort-aside">
+							{% if cohort.logo %}
+							<img class="cohort-logo" src="{{ cohort.logo | relative_url }}"
+								alt="{{ cohort.logo_alt | default: cohort.engine }} logo">
+							{% else %}
+							<span class="badge badge-{{ cohort.accent }}">{{ cohort.engine }}</span>
+							{% endif %}
+						</div>
+					</div>
+					<div class="cohort-cta{% unless cohort.note and cohort.note != '' %} cohort-cta-gap{% endunless %}">
+						{% if link_ready %}
+						<a class="btn btn-primary" href="{{ cohort.checkout_url }}">
+							Book a seat — {{ cohort.price }}
+						</a>
+						<p class="text-xs text-slate-500">
+							<i class="fas fa-lock text-brand-tech"></i>
+							secure checkout via Stripe
+						</p>
+						{% else %}
+						<a class="btn btn-outline" href="#newsletter">
+							Tell me when booking opens
+						</a>
+						{% endif %}
+					</div>
+			</div>
+			{% endfor %}
+			{% if shown == 0 %}
+			<div class="card">
+				<h3 class="heading-flex">
+					<i class="fas fa-calendar-days text-brand-accent"></i> Next dates coming soon
+				</h3>
+				<p class="text-slate-400 mb-4">
+					The next public cohort hasn't been scheduled yet.
+					<a href="#newsletter" class="text-white hover:underline">Join the newsletter</a>
+					to hear about new dates first, or
+					<a href="#contact" class="text-white hover:underline">get in touch</a>
+					about a workshop for your studio.
+				</p>
+			</div>
+			{% endif %}
+		</div>
+	</div>
+	</div>
+</section>
+{% comment %} HIDDEN: Public Workshops section {% endcomment %}{% comment %}
 <section class="section section-bg section-padded" id="build">
 	<div class="container">
 		<div class="grid-12">
@@ -230,7 +371,10 @@ hide_nav_sections: true
 		</div>
 	</div>
 </section>
+{% endcomment %}
 
 
-{% include sections/newsletter.html text="Don't see a date that suits you? Sign up to the Automated AF newsletter and be the <span class='text-white font-bold'>first to hear</span> about new public workshop dates, plus automation tips and news." %}
+{% include sections/newsletter.html text="Don't see a date that suits you? Sign up to the Automated AF newsletter and be
+the <span class='text-white font-bold'>first to hear</span> about new public workshop dates, plus automation tips and
+news." %}
 {% include sections/contact.html %}

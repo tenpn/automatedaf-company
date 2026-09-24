@@ -296,7 +296,11 @@ hide_nav_sections: true
 						</div>
 					</div>
 					<div class="cohort-cta{% unless cohort.note and cohort.note != '' %} cohort-cta-gap{% endunless %}">
-						{% if link_ready %}
+						{% if cohort.sold_out %}
+						<button class="btn btn-primary btn-disabled" type="button" disabled aria-disabled="true">
+							Sold out
+						</button>
+						{% elsif link_ready %}
 						<a class="btn btn-primary" href="{{ cohort.checkout_url }}">
 							Book a seat — {{ cohort.price }}
 						</a>

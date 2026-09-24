@@ -14,6 +14,9 @@
 # checkout_url: the Stripe Payment Link for this cohort (one link per cohort).
 #   Leave it blank, or leave REPLACE_ME in it, and the card falls back to a
 #   "get notified" button instead of a live checkout button.
+#
+# sold_out: optional. Set to true to replace the checkout button with a disabled
+#   "Sold out" button. Takes priority over checkout_url.
 
 - id: unreal-2026-09
   engine: Unreal
@@ -31,6 +34,7 @@
   session_time: "3pm-5pm UTC"
   location: Remote (Zoom)
   seats: 8
+  sold_out: true
   price: "£1000"
   price_note: "per seat"
   prerequisites:
@@ -56,6 +60,7 @@
   session_time: "3pm-5pm UTC"
   location: Remote (Zoom)
   seats: 8
+  sold_out: true
   price: "£1000"
   price_note: "per seat"
   prerequisites:

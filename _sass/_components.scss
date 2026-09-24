@@ -219,6 +219,15 @@ video.flex {
   }
 }
 
+// Unclickable state, e.g. a sold-out cohort
+.btn-disabled,
+.btn-disabled:hover {
+  background-color: transparent;
+  border-color: $color-slate-600;
+  color: $color-slate-500;
+  cursor: not-allowed;
+}
+
 .btn-outline {
   border: 1px solid $color-slate-600;
   color: $color-slate-300;
